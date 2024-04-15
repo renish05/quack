@@ -1,15 +1,32 @@
 import React from 'react';
-import StartPage from './pages/start'; // Import the StartPage component
-import ChoosePage from './pages/choose'; // Import the StartPage component
-import LoginPage from './pages/login'; // Import the StartPage component
-import LoginPageT from './pages/logint'; // Import the StartPage component
-import './App.css'; // Import any global CSS styles
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import StartPage from './pages/start';
+import LoginPage from './pages/login';
+import SignUpPage from './pages/signup';
+import ChoosePage from './pages/choose';
+import CleaningPage from './pages/cleaning';
+import DateTimePage from './pages/datetime';
+import HomePage from './pages/home';
+import HomeTPage from './pages/homet';
+import SelectServicePage from './pages/select';
 
 function App() {
   return (
-    <div className="app">
-      <LoginPageT />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<StartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/choose" element={<ChoosePage />} />
+          <Route path="/cleaning" element={<CleaningPage />} />
+          <Route path="/datetime" element={<DateTimePage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/homet" element={<HomeTPage />} />
+          <Route path="/select" element={<SelectServicePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomePage.css'; // Import CSS file for styling
+// import './HomePage.css'; // Import CSS file for styling
 
 class HomePage extends React.Component {
   constructor(props) {

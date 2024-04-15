@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/choose.css'
+// import '../css/choose.css'
 
 function ChoosePage() {
   const [selectedValue, setSelectedValue] = useState(null);

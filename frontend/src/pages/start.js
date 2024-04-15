@@ -1,34 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import '../css/start.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
+// import './startPage.css';
 
-function StartPage() {
+const StartPage = () => {
   const [selectedService, setSelectedService] = useState(0);
+  const navigate = useNavigate(); // Use useNavigate hook
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Replace the logic to randomly select a service here
+    // Randomly select from service list every 2 seconds
+    const timer = setInterval(() => {
       setSelectedService(0); // Replace with your desired index or logic
     }, 2000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, []);
 
+  const handleGetStarted = () => {
+    navigate('/choose'); // Navigate to the choose page using useNavigate
+  };
+
   return (
-    <div className="container">
+    <div className="start-page">
       <div className="logo-container">
-        <img src="assets/quack.jpg" alt="Quack Logo" className="logo" />
+        <img src="assets/quack.jpg" alt="Quack Logo" />
       </div>
       <div className="content-container">
-        <div className="content">
-          <h1 className="title">Easy, reliable way to take care of your home</h1>
-          <p className="description">We provide you with the best people to help take care of your home.</p>
-          <button className="button" onClick={() => {}}>
-            Get Started
-          </button>
+        <div className="text-container">
+          <h2>Easy, reliable way to take care of your home</h2>
+        </div>
+        <div className="text-container">
+          <p>We provide you with the best people to help take care of your home.</p>
+        </div>
+        <div className="button-container">
+          <button onClick={handleGetStarted}>Get Started</button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default StartPage;
