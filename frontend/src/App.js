@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import StartPage from './pages/start'; // Import the StartPage component
+import ChoosePage from './pages/choose'; // Import the StartPage component
+import LoginPage from './pages/login'; // Import the StartPage component
+import LoginPageT from './pages/logint'; // Import the StartPage component
+import './App.css'; // Import any global CSS styles
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <LoginPageT />
     </div>
   );
 }
