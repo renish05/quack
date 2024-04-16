@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import './startPage.css';
+import './startPage.css';
 
 const StartPage = () => {
   const [selectedService, setSelectedService] = useState(0);
-  const navigate = useNavigate(); // Use useNavigate hook
+  const navigate = useNavigate(); 
 
   useEffect(() => {
-    // Randomly select from service list every 2 seconds
     const timer = setInterval(() => {
-      setSelectedService(0); // Replace with your desired index or logic
+      setSelectedService(0); 
     }, 2000);
 
     return () => clearInterval(timer);
   }, []);
 
   const handleGetStarted = () => {
-    navigate('/choose'); // Navigate to the choose page using useNavigate
+    navigate('/choose'); 
   };
 
   return (
