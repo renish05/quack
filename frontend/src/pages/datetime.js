@@ -6,7 +6,6 @@ const DateAndTime = () => {
   const [selectedHour, setSelectedHour] = useState('01:00');
 
   useEffect(() => {
-    // Simulating the delay to scroll to a specific index
     const timer = setTimeout(() => {
       // Scroll logic here
       // Assuming the scrolling functionality is handled by a library or custom function
