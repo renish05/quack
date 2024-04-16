@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './CleaningPage.css';
+import '../css/ClientSelService2.css';
 
-const CleaningPage = () => {
+const ClientSelService2 = () => {
   const [rooms, setRooms] = useState([
     ['Living Room', 'https://img.icons8.com/officel/2x/living-room.png', 'red', 0],
     ['Bedroom', 'https://img.icons8.com/fluency/2x/bedroom.png', 'orange', 1],
@@ -70,4 +70,4 @@ const CleaningPage = () => {
   );
 };
 
-export default CleaningPage;
+export default ClientSelService2;

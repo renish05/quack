@@ -1,7 +1,7 @@
 import React from 'react';
-import './HomePage.css'; 
+import '../css/TechHomePage.css'; 
 
-class HomePage extends React.Component {
+class TechHomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,4 +59,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default TechHomePage;

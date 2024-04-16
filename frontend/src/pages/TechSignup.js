@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import '../css/TechSignup.css';
 
-function SignUpPage() {
+
+function TechSignup() {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mobile, setMobile] = useState('');
   const [address, setAddress] = useState('');
+  const [selectedProfession, setSelectedProfession] = useState('Electrician');
+  const [experience, setExperience] = useState('');
+  const [places, setPlaces] = useState('');
 
   const handleSignUp = () => {
     if (
@@ -15,7 +20,9 @@ function SignUpPage() {
       email.trim() !== '' &&
       password.trim() !== '' &&
       mobile.trim() !== '' &&
-      address.trim() !== ''
+      address.trim() !== '' &&
+      experience.trim() !== '' &&
+      places.trim() !== ''
     ) {
       // Perform sign-up logic here
       // For example, you can navigate to the home page
@@ -86,6 +93,37 @@ function SignUpPage() {
           onChange={(e) => setAddress(e.target.value)}
         />
       </div>
+      <div className="form-group">
+        <label>Willing to work as</label>
+        <select
+          className="form-control"
+          value={selectedProfession}
+          onChange={(e) => setSelectedProfession(e.target.value)}
+        >
+          <option value="Electrician">Electrician</option>
+          <option value="Plumber">Plumber</option>
+          <option value="Carpenter">Carpenter</option>
+          <option value="Mechanic">Mechanic</option>
+        </select>
+      </div>
+      <div className="form-group">
+        <label>Years of Experience</label>
+        <input
+          type="number"
+          className="form-control"
+          value={experience}
+          onChange={(e) => setExperience(e.target.value)}
+        />
+      </div>
+      <div className="form-group">
+        <label>Places available to work</label>
+        <input
+          type="text"
+          className="form-control"
+          value={places}
+          onChange={(e) => setPlaces(e.target.value)}
+        />
+      </div>
       <div className="text-center">
         <button className="btn btn-primary" onClick={handleSignUp}>
           Sign Up
@@ -95,4 +133,4 @@ function SignUpPage() {
   );
 }
 
-export default SignUpPage;
+export default TechSignup;

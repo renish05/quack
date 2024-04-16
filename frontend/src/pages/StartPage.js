@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './startPage.css';
+import '../css/StartPage.css';
 
 const StartPage = () => {
   const [selectedService, setSelectedService] = useState(0);

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './selectService.css';
+import '../css/ClientSelService.css';
 
-const SelectService = () => {
+const ClientSelService = () => {
   const [selectedService, setSelectedService] = useState(-1);
   const navigate = useNavigate(); 
 
@@ -53,4 +53,4 @@ const SelectService = () => {
   );
 };
 
-export default SelectService;
+export default ClientSelService;

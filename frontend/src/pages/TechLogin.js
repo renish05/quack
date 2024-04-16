@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import '../css/TechLogin.css';
 
-function LoginPage() {
+
+function TechLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -25,7 +27,7 @@ function LoginPage() {
   return (
     <div className="container">
       <div className="text-center">
-        <h1>Login as Client</h1>
+        <h1>Login as Technician</h1>
       </div>
       <div className="form-group">
         <label>Username</label>
@@ -57,4 +59,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default TechLogin;
