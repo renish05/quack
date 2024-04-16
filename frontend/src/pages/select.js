@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import './selectService.css';
+import './selectService.css';
 
 const SelectService = () => {
   const [selectedService, setSelectedService] = useState(-1);
-  const navigate = useNavigate(); // Use useNavigate hook
+  const navigate = useNavigate(); 
 
   const services = [
     { name: 'Cleaning', imageURL: 'https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/2x/external-cleaning-labour-day-vitaliy-gorbachev-flat-vitaly-gorbachev.png' },
@@ -25,7 +25,7 @@ const SelectService = () => {
 
   const handleNextClick = () => {
     if (selectedService >= 0) {
-      navigate('/cleaning'); // Navigate to the cleaning page
+      navigate('/cleaning'); 
     }
   };
 
