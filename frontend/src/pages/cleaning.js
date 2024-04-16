@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './CleaningPage.css'; // Import CSS file for styling
+import './CleaningPage.css';
 
 const CleaningPage = () => {
   const [rooms, setRooms] = useState([
